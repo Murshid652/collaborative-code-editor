@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+.HomePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Form {
+    box-shadow: 10px 10px #c5c5c5;
+    background-color: #CA82FF;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    max-width: 90%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.FormInputs {
+    display: flex;
+    flex-direction: column;
+    /* margin: 5px; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.InputBox {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #FFFDE3;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.Joinbtn,
+.Create {
+    background: #C7EEFF;
+}
+
+.Joinbtn:hover {
+    background: #88E0D0;
+}
+
+.Create:hover {
+    background: #88E0D0;
+}
+
+.FormLabel {
+    margin: 10px;
+    margin-top: 20px;
+    font-size: larger;
 }
