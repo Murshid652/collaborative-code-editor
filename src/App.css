@@ -66,3 +66,52 @@
     margin-top: 20px;
     font-size: larger;
 }
+
+.EditorPage {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    height: 100vh;
+}
+
+.Sidebar {
+    background-color: #CA82FF;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.SidebarPeople {
+    flex: 1;
+}
+
+.ClientList {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.client {
+    display: flex;
+    /* flex-direction: column; */
+    font-weight: bold;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.UserName {
+    margin-left: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    border-radius: 12px;
+    background-color: cyan;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.leavebtn,
+.copybtn {
+    margin-top: 20px;
+}
