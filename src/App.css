@@ -7,7 +7,7 @@
 
 .Form {
     box-shadow: 10px 10px #c5c5c5;
-    background-color: #CA82FF;
+    background-color: #282A36;
     padding: 20px;
     border-radius: 15px;
     width: 400px;
@@ -28,6 +28,7 @@
     border: none;
     margin-bottom: 20px;
     background-color: #FFFDE3;
+    color: #282A36;
     font-size: 16px;
     font-weight: bold;
 }
@@ -50,34 +51,52 @@
 
 .Joinbtn,
 .Create {
-    background: #C7EEFF;
+    background-color: #00E980;
+    color: #282A36;
+    width: 120px;
+    transition: 0.3 ease all;
 }
 
 .Joinbtn:hover {
-    background: #88E0D0;
+    background-color: #282A36;
+    color: #00E980;
+    width: 120px;
 }
 
 .Create:hover {
-    background: #88E0D0;
+    background-color: #282A36;
+    color: #00E980;
+    width: 120px;
 }
 
 .FormLabel {
     margin: 10px;
     margin-top: 20px;
     font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .EditorPage {
     display: grid;
     grid-template-columns: 230px 1fr;
     height: 100vh;
+    max-width: 100wh;
 }
 
 .Sidebar {
-    background-color: #CA82FF;
+    background-color: #282A36;
     padding: 15px;
     display: flex;
     flex-direction: column;
+    border-right: 3px solid #00E980;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.connClients {
+    color: white;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .SidebarPeople {
@@ -94,7 +113,8 @@
 .client {
     display: flex;
     /* flex-direction: column; */
-    font-weight: bold;
+    /* font-weight: bold; */
+    color: powderblue;
     align-items: center;
     flex-wrap: wrap;
     gap: 8px;
@@ -105,7 +125,11 @@
     padding: 5px;
     padding-left: 15px;
     border-radius: 12px;
-    background-color: cyan;
+    white-space: nowrap;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    background-color: #00E980;
+    color: #282A36;
     width: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -113,5 +137,118 @@
 
 .leavebtn,
 .copybtn {
+    background-color: #00E980;
+    color: #282A36;
     margin-top: 20px;
+}
+
+.leavebtn:hover {
+    background-color: #282A36;
+    color: #00E980;
+}
+
+.copybtn:hover {
+    background-color: #282A36;
+    color: #00E980;
+}
+
+.CodeMirror {
+    height: calc(100vh - 20px) !important;
+    width: 70%;
+    font-size: 20px;
+    line-height: 1.6;
+    padding-top: 20px;
+}
+
+.CodeMirror-scroll,
+.CodeMirror-vscrollbar,
+.CodeMirror-hscrollbar {
+    overflow: hidden !important;
+}
+
+.Editor {
+    display: flex;
+    min-width: 100%;
+    border: none;
+}
+
+.right-container {
+    /* flex: 40%; */
+    /* height: calc(100vh - 20px); */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #282A36;
+    border-left: 3px solid #00E980;
+    padding: 5px;
+}
+
+.input-box {
+    flex: 50%;
+}
+
+.input-box textarea {
+    font-size: 16px;
+}
+
+.output-box {
+    flex: 50%;
+    background-color: #282A36;
+    overflow-y: auto;
+    color: white;
+    position: relative;
+}
+
+.clear-btn {
+    background-color: #00E980;
+    color: #282A36;
+    width: 70px;
+    position: absolute;
+    bottom: 14px;
+    right: 18px;
+}
+
+.clear-btn:hover {
+    background-color: #282A36;
+    color: #00E980;
+    width: 120px;
+}
+
+.std-input-btn {
+    background-color: #00E980;
+    color: #282A36;
+    width: 70px;
+    position: absolute;
+    bottom: calc(50vh + 14px);
+    right: 18px;
+}
+
+.std-input-btn:hover {
+    background-color: #282A36;
+    color: #00E980;
+    width: 120px;
+}
+
+.output-box pre {
+    font-size: 15px;
+    white-space: pre-wrap;
+}
+
+h4 {
+    color: #00E980;
+}
+
+#code-inp {
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    background-color: #282A36;
+    color: whitesmoke;
+    padding: 5px;
+}
+
+#code-inp:focus {
+    outline: none;
 }
