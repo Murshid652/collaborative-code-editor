@@ -15,6 +15,7 @@ const EditorPage = () => {
 
 
   const socketRef = useRef(null);
+  const codeRef = useRef(null);
   const location = useLocation();
   const reactNavigator = useNavigate();
   const [Clients, setClients] = useState([]);
@@ -43,13 +44,17 @@ const EditorPage = () => {
 
       //listening for join event
 
-      socketRef.current.on(ACTIONS.JOINED, ({clients , UserName ,socketId }) =>{
+      socketRef.current.on(ACTIONS.JOINED, ({clients , UserName , socketID }) =>{
         if(UserName !== location.state?.UserName){
           toast.success(UserName + ' joined the Room');
           console.log(UserName, " joined");
         }
         setClients(clients);
-        console.log(clients);
+        // console.log(clients);
+        socketRef.current.emit(ACTIONS.SYNC_CODE, {
+          code : codeRef.current,
+          socketID,
+         });
       });
 
       //listening for disconnect event
@@ -133,7 +138,7 @@ const EditorPage = () => {
       </div>
 
       <div className="Editor">
-        <Editor socketRef={socketRef} RoomId={RoomId} />
+        <Editor socketRef={socketRef} RoomId={RoomId} onCodeChange = {(code) => {codeRef.current = code}} />
 
 
         
