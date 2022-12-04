@@ -6,17 +6,10 @@ const { Server } = require('socket.io');
 const ACTIONS = require('./src/ACTIONS');
 const cors = require("cors");
 const Axios = require("axios");
-const path = require("path")
 
 
 app.use(cors());
 app.use(express.json());
-
-
-app.use(express.static('build'));
-app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-})
 
 const server = http.createServer(app);
 
